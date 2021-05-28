@@ -4,24 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header id="welcome-section">
       <h1>AR</h1>
-      <nav>
+      <nav id="navbar">
         <ul>
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/index.html">About</a></li>
-          <li><a href="/index.html">Gallery</a></li>
-          <li><a href="/index.html">Contact</a></li>
+
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div>
-      <h3>Aleksandra Ryan</h3>
-      <h4>Frontend Developer</h4>
-    </div>
+    <!-- Projects -->
+    <section id="projects">
+      <div class="project-title">
+        <h2>Weather App</h2>
+
+        <div class="project-img">
+          <a href="https://zen-mclean-14fd14.netlify.app/" target="_blank">
+            <img
+              src="https://www.aleksandraryan.com/images/Weather-app.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <div class="project-title">
+        <h2>E-Reader</h2>
+        <div class="project-img">
+          <a
+            href="https://eager-perlman-3a96b1.netlify.app/index.html"
+            target="_blank"
+          >
+            <img
+              src="https://www.aleksandraryan.com/images/e-reader.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+      <div class="project-title">
+        <h2>Landing Page</h2>
+        <div class="project-img">
+          <a href="https://eager-benz-db75bf.netlify.app/" target="_blank">
+            <img
+              src="https://www.aleksandraryan.com/images/passat-landing-page.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Contact  -->
+    <section id="contact">
+      <div class="profile-link">
+        <div class="contact-section">
+          <h2>Let's work together</h2>
+        </div>
+        <div class="social github">
+          <a href="https://github.com/AleksandraRyan" target="_blank">
+            <i class="fab fa-github fa-2x"></i> <br />
+            Github
+          </a>
+        </div>
+
+        <div class="social linkedin">
+          <a
+            href="https://www.linkedin.com/in/aleksandra-ryan-31a5899a/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin fa-2x"></i> <br />
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="social email">
+          <a href="mailto:aleksandraryand@gmail.com" target="_blank">
+            <i class="fas fa-envelope fa-2x"></i> <br />
+            Email
+          </a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
