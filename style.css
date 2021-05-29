@@ -35,12 +35,26 @@ header h1 {
   border: 3px solid #fff;
   padding: 6px;
   margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
 }
 
 header nav ul {
   display: flex;
   list-style-type: none;
   margin-top: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 header nav a {
@@ -57,12 +71,12 @@ header nav a:hover {
 
 /* Projects */
 #projects {
-  background-image: linear-gradient(to left, #43e97b 0%, #38f9d7 100%);
+  background: #3ff0a4;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   align-items: center;
-  height: 75vh;
+  /* height: 100vh; */
   padding: 50px;
 }
 
@@ -79,57 +93,83 @@ header nav a:hover {
 }
 
 .project-img img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-top-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-radius: 5px;
 }
 
 /* Contact */
 
-#contact {
-  height: 75vh;
-  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-}
-
-.contact-section h2 {
-  font-size: 50px;
-  text-align: center;
-  padding: 50px 0;
+.contact-section {
+  background: #06bbe9;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.profile-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   text-align: center;
-  margin-top: 200px;
+  height: 100vh;
+  width: 100%;
 }
 
-.social.github i {
-  color: #000;
-  margin-bottom: 7px;
-}
-.social.linkedin i {
-  color: rgb(7, 103, 192);
-  margin-bottom: 7px;
-}
-.social.email i {
-  color: aliceblue;
-  margin-bottom: 7px;
+.contact-info h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
 }
 
-.email a {
-  color: #000;
+.contact-section .social {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  max-width: 980px;
 }
 
 .social a {
   text-decoration: none;
+  color: #000;
+  transition: all 300ms ease;
 }
 
-.social i {
-  margin-right: 5px;
+.social a:hover {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  header::before {
+    position: absolute;
+    content: 'Aleksandra Ryan | Frontend Developer';
+    top: 50%;
+    right: 12%;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header::before {
+    position: absolute;
+    content: 'Aleksandra Ryan | Frontend Developer';
+    top: 50%;
+    right: 10%;
+    font-size: 30px;
+  }
+
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    height: 100vh;
+  }
+
+  .project-img img {
+    max-width: 55%;
+    height: auto;
+  }
+}
+
+@media (max-width: 563px) {
+  .contact-section .social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
